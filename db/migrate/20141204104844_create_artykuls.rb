@@ -1,0 +1,19 @@
+class CreateArtykuls < ActiveRecord::Migration
+  def up
+    create_table :artykuls do |t|
+      t.integer "strona_id"
+      t.string "nazwa"
+      t.integer "pozycja"
+      t.boolean "widoczny", :default=>true
+      t.text "zawartosc"
+      t.attachment :zdjecia
+      
+      
+      t.timestamps
+    end
+  end
+  
+  def down
+    drop_table :artykuls
+  end
+end

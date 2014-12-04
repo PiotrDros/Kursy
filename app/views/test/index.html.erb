@@ -1,0 +1,19 @@
+<h1>Pierwsza strona</h1>
+<p>Moja strona testowa   <p/>
+
+<% suma = 2 + 2%>
+
+Suma =<%= suma%>
+
+<%= @testowa %>
+
+<br />
+
+<% @imiona.each do |imie| %>
+  <%= "Witaj #{imie.capitalize} w kursie"  %>
+  <br />
+<% end %>
+  <br />
+  
+  
+  <%= link_to("Witaj", {:action => 'gad', :param1=>2}) %>
