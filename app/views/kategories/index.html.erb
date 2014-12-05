@@ -21,9 +21,9 @@
           <th><%= kategoria.widoczna ? 'Tak' : 'Nie'  %></th>
           <th><%=  kategoria.stronas.size%></th>
           <th>
-              <%= link_to("Pokaz", "#{}")%>
+              <%= link_to("Pokaz", {:action => 'pokaz', :id =>kategoria.id})%>
               <%= link_to("Edycja", "#{}")%>
-              <%= link_to("Usun", "#{}")%>
+              <%= link_to("Usun", {:action => 'usun', :id =>kategoria.id})%>
           </th>
       </tr>
 
