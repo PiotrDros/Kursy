@@ -1,35 +1,7 @@
 <div class="hero-unit">
 <h1>Kategorie</h1>
 
-<<<<<<< HEAD
 
-
-<p>Ilość kategorii: <%= @kategorie.size  %>  </p>
-
-<table>
-    <tr>
-        <th>pozycja</th>
-        <th>nazwa kategorii</th>
-        <th>widoczna</th>
-        <th>strony</th>
-        <th>akcja</th>
-    </tr>
-
-    <% @kategorie.each do |kategoria| %>
-      <tr>
-          <th><%= kategoria.pozycja %> </th>
-          <th><%= kategoria.nazwa  %></th>
-          <th><%= kategoria.widoczna ? 'Tak' : 'Nie'  %></th>
-          <th><%=  kategoria.stronas.size%></th>
-          <th>
-              <%= link_to("Pokaz", {:action => 'pokaz', :id =>kategoria.id})%>
-              <%= link_to("Edycja",{:action => 'edycja', :id =>kategoria.id})%>
-              <%= link_to("Usun", {:action => 'usun', :id =>kategoria.id})%>
-          </th>
-      </tr>
-
-    <% end %>
-=======
 <%= link_to("Dodaj nowa kategorię", {:action => 'nowa'}, :class => 'btn btn-mini btn-primary')%>
 
   <p style="text-align: right;">Ilość kategorii: <%= @kategorie.size %></p>
