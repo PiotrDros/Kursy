@@ -1,6 +1,7 @@
+<div class="hero-unit">
 <h1>Kategorie</h1>
-<%= link_to("Dodaj nowa kategorie", {:action=>'nowa'} ) %>
 
+<<<<<<< HEAD
 
 
 <p>Ilość kategorii: <%= @kategorie.size  %>  </p>
@@ -28,6 +29,33 @@
       </tr>
 
     <% end %>
+=======
+<%= link_to("Dodaj nowa kategorię", {:action => 'nowa'}, :class => 'btn btn-mini btn-primary')%>
+
+  <p style="text-align: right;">Ilość kategorii: <%= @kategorie.size %></p>
+
+  <table class="table table-striped">
+	<tr class="info">
+		<th>pozycja</th>
+		<th>nazwa kategorii</th>
+		<th>widoczna</th>
+		<th>strony</th>
+		<th>akcja</th>
+	</tr>
+<% @kategorie.each do |kategoria| %>	
+	<tr>
+		<td><%= kategoria.pozycja %></td>
+		<td><%= kategoria.nazwa %></td>
+		<td class="center"><%= kategoria.widoczna ? 'Tak' : 'Nie' %></td>
+		<td class="center"><%= kategoria.stronas.size %></td>
+		<td  class="actions">
+			<%= link_to("Pokaż", {:action => 'pokaz', :id => kategoria.id}, :class => 'btn btn-xs btn-default') %>
+			<%= link_to("Edycja", {:action => 'edycja', :id => kategoria.id}, :class => 'btn btn-xs btn-primary') %>			
+			<%= link_to("Usuń",  {:action => 'usun', :id => kategoria.id}, :class => 'btn btn-xs btn-danger') %>			
+		</td>
+	</tr>
+<% end %>
+>>>>>>> dodanie bootstrap
 
 </table>
-
+</div>
